@@ -1,0 +1,86 @@
+\documentclass[]{onethree}
+
+% single-column: \documentclass[]{onethree}
+% twocolumn: \documentclass[twocolumn]{onethree}
+
+\usepackage[toc,page,header]{appendix}
+\usepackage{minitoc}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+% Placeholder figure used throughout the template. Replace the box content with
+% \includegraphics when adding final paper figures.
+\newcommand{\templatefigure}[2][0.95\linewidth]{%
+  \fbox{%
+    \begin{minipage}[c][0.28\linewidth][c]{#1}
+      \centering\sffamily\small
+      #2\\[0.6em]
+      Replace with final figure or table artwork.
+    \end{minipage}%
+  }%
+}
+
+\title{Paper Title: Concise Subtitle Describing the Main Contribution}
+
+\author[1]{First Author}
+\author[1,2]{Second Author}
+\author[2]{Third Author}
+
+\affiliation[1]{Institution One}
+\affiliation[2]{Institution Two}
+
+\abstract{
+This template supports arXiv-style papers with a polished title block, resource links, figures, references, and appendix material.
+Replace this text with a concise summary of the problem, method, contribution, and main findings.
+Use the remaining sentences to describe the main technical idea, the evaluation setting, and the most important result or takeaway.
+The final version may also point readers to released project pages, code repositories, models, datasets, demos, or supplementary materials.
+\vspace{-0.1cm}
+}
+
+\checkdata[Resources]{
+  \href{https://choucisan.github.io}{\raisebox{-1ex}{\includegraphics[height=4.2ex]{assets/internet-icon.pdf}}~Project Page}\hspace{2em}
+  \href{https://github.com/choucisan}{\raisebox{-1ex}{\includegraphics[height=4.2ex]{assets/github-logo.pdf}}~Code}\hspace{2em}
+  \href{https://huggingface.co/choucsan}{\raisebox{-1ex}{\includegraphics[height=4.2ex]{assets/hf-logo.pdf}}~Hugging Face}
+}
+
+\begin{document}
+\maketitle
+\vspace{-1.1cm}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.98\linewidth]{pngs/image.png}
+  \caption{\textbf{Paper overview.} Replace this placeholder image with the main teaser, pipeline summary, or key result figure.}
+  \label{fig:teaser}
+\end{figure}
+
+\newpage
+
+\tableofcontents
+\newpage
+
+% If the paper should not include a table of contents, comment out the three
+% lines above. Keep the title page and contents on separate pages.
+
+\input{sections/introduction}
+\input{sections/modeldesign}
+\input{sections/data}
+\input{sections/modeltraining}
+\input{sections/inference}
+\input{sections/experiments}
+\input{sections/application}
+\input{sections/conclusion}
+
+\clearpage
+
+\bibliographystyle{plainnat}
+\bibliography{main}
+
+\clearpage
+
+\beginappendix
+\input{sections/appendix}
+
+\end{document}

@@ -1,0 +1,20 @@
+\section{Training}
+
+\subsection{Training Setup}
+
+Describe the training recipe used for the main model or algorithm.
+Include the optimizer, learning rate schedule, batch size, number of steps or epochs, hardware, precision, and checkpoint selection policy.
+
+\subsection{Curriculum or Stages}
+
+If the method uses multiple training stages, describe them in chronological order:
+\begin{itemize}
+    \item \textbf{Stage 1.} State the purpose of the first stage and the data used.
+    \item \textbf{Stage 2.} State how the second stage changes the objective, data, resolution, or supervision.
+    \item \textbf{Final Tuning.} State any final adaptation, calibration, or selection step.
+\end{itemize}
+
+\subsection{Ablations During Development}
+
+Briefly describe the design choices that were tested while developing the method.
+Detailed ablation results can be reported in Section~\ref{sec:evaluation} or in the appendix.

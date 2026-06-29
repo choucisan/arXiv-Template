@@ -1,0 +1,43 @@
+\section{Method}
+
+This section should present the proposed method at a level that allows readers to understand and reproduce the core idea.
+Start with a short overview of the full pipeline, then introduce each component in the order it is used.
+
+\subsection{Problem Formulation}
+
+Define the inputs, outputs, assumptions, and notation.
+For example, let $x$ denote the input, $y$ denote the target output, and $f_\theta$ denote the model or algorithm being optimized.
+Clarify whether the setting is supervised, self-supervised, generative, interactive, or analytical.
+
+\subsection{System Overview}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{pngs/image1.png}
+    \caption{\textbf{Method overview.} Replace this placeholder with a diagram of the proposed pipeline, including inputs, major modules, and outputs.}
+    \label{fig:method_overview}
+\end{figure}
+
+Describe the major components shown in Figure~\ref{fig:method_overview}.
+Keep this subsection conceptual; details such as architecture, losses, and implementation choices can be moved to later subsections.
+
+\subsection{Core Module}
+
+Explain the main technical component.
+State what problem it solves, what information it consumes, and what representation or prediction it produces.
+If the method uses a neural architecture, describe the backbone, conditioning signals, and output heads.
+If the method is not neural, describe the algorithmic stages and decision rules.
+
+\subsection{Objective}
+
+Provide the training or optimization objective.
+Use equations for important losses and define each term immediately after it appears:
+\begin{equation}
+    \mathcal{L} = \lambda_1 \mathcal{L}_{\mathrm{main}} + \lambda_2 \mathcal{L}_{\mathrm{reg}}.
+\end{equation}
+Here, $\mathcal{L}_{\mathrm{main}}$ is the primary task loss and $\mathcal{L}_{\mathrm{reg}}$ is an optional regularization term.
+
+\subsection{Implementation Details}
+
+Summarize implementation choices that are needed for reproducibility, including model size, optimizer, learning rate schedule, batch size, hardware, and relevant preprocessing.
+Move lengthy details to the appendix when they interrupt the main narrative.

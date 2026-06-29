@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.maf
+*.mtc
+*.mtc0
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Editor/project files
+.vscode/
+.idea/
